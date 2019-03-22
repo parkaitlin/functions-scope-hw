@@ -28,11 +28,23 @@ console.log('Homework!');
 // };
 
 //Digit Sum
-const sumDigits = (input) => {
-    let array = input.toString().split('');
-    array.reduce(function (accumulator, currentValue){
-        return accumulator + currentValue;
-    }, 0);
+// const sumDigits = (input) => {
+//     let array = input.toString().split('');
+//     array.reduce(function (accumulator, currentValue){
+//         return accumulator + currentValue;
+//     }, 0);
+// };
+
+// console.log(sumDigits(42));
+
+// Pythagoras
+
+const calculateSide = (sideA,sideB) => {
+    if ((typeof sideA !== 'number') || (typeof sideB !== "number")){
+        return false;
+    } else {
+        return Math.sqrt(sideA * sideA + sideB * sideB);
+    };
 };
 
-sumDigits(42);
+console.log(calculateSide(8,6));
