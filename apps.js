@@ -31,20 +31,58 @@ console.log('Homework!');
 // const sumDigits = (input) => {
 //     let array = input.toString().split('');
 //     array.reduce(function (accumulator, currentValue){
-//         return accumulator + currentValue;
-//     }, 0);
+//         return accumulator + currentValue);
+//     },
 // };
 
 // console.log(sumDigits(42));
 
 // Pythagoras
+// const calculateSide = (sideA,sideB) => {
+//     if ((typeof sideA !== 'number') || (typeof sideB !== "number")){
+//         return false;
+//     } else {
+//         return Math.sqrt(sideA * sideA + sideB * sideB);
+//     };
+// };
 
-const calculateSide = (sideA,sideB) => {
-    if ((typeof sideA !== 'number') || (typeof sideB !== "number")){
-        return false;
+// console.log(calculateSide(8,6));
+
+// Sum Array
+// const sumArray = (array) => {
+//     array.reduce(function (accumulator, currentValue){
+//         return accumulator + currentValue;
+//     }, 0);
+// };
+
+// console.log(sumArray([1, 2, 3, 4, 5, 6]));
+
+//Prime numbers
+
+const checkPrime = (number) => {
+    if(number === 1){
+        return 'false';
+    } else if(number === 2){
+        return 'true';
     } else {
-        return Math.sqrt(sideA * sideA + sideB * sideB);
+        for(let i = 2; i < number; i++){
+            if(number % i === 0){
+                return 'false';
+            } else {
+                return 'true';
+            };
+        };
     };
 };
+console.log(checkPrime(37));
+console.log(checkPrime(49));
+console.log(checkPrime(97));
+console.log(checkPrime(100));
 
-console.log(calculateSide(8,6));
+const printPrime = (number) => {
+    for(i = 2; i <= number; i++){
+        if(checkPrime(number) === true) {
+            console.log(i);
+        }
+    }
+};
