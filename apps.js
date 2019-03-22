@@ -10,4 +10,19 @@ console.log('Homework!');
 //3. For a function, to return a value "return ()" needs to be 
     // included to stop the code and send an output to the console.
 
-    
+// Palindrome again
+const checkPalindrome = (String) => {
+    let array = [];
+    let newString = string.split('');
+    let letters = /^[A-Za-z]+$/;
+    for(i = 0 ; i <= newString.length; i++){
+        if(newString.includes(letters[i])){
+            array.push(letters[i]);
+        };
+    };
+    if(Array.length === String.lenth){
+        return 'true'
+    } else {
+        return 'false'
+    };
+};
