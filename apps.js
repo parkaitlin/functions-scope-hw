@@ -11,21 +11,26 @@ console.log('Homework!');
     // included to stop the code and send an output to the console.
 
 // // Palindrome again
-// const checkPalindrome = (String) => {
-//     let array = [];
-//     let newString = string.split('');
-//     let letters = /^[A-Za-z]+$/;
-//     for(i = 0 ; i <= newString.length; i++){
-//         if(newString.includes(letters[i])){
-//             array.push(letters[i]);
-//         };
-//     };
-//     if(Array.length === String.lenth){
-//         return 'true'
-//     } else {
-//         return 'false'
-//     };
-// };
+const checkPalindrome = (str) => {
+    let remove = /[/W_]/g;
+    let initialString = str.toLowerCase().replace(remove, '');
+    let reverseString = initialString.split('').reverse().join('');
+    if(reverseString === initialString) {
+        return true
+    } else {
+        return false
+    };
+};
+
+console.log(checkPalindrome('Radar'));
+console.log(checkPalindrome('Borscht'));
+
+// let str = 'radar'    
+// let array = str.split('');
+// let string = array.join('');
+// console.log(array);
+// console.log(string);
+
 
 //Digit Sum
 // const sumDigits = (input) => {
@@ -59,30 +64,30 @@ console.log('Homework!');
 
 //Prime numbers
 
-const checkPrime = (number) => {
-    if(number === 1){
-        return 'false';
-    } else if(number === 2){
-        return 'true';
-    } else {
-        for(let i = 2; i < number; i++){
-            if(number % i === 0){
-                return 'false';
-            } else {
-                return 'true';
-            };
-        };
-    };
-};
-console.log(checkPrime(37));
-console.log(checkPrime(49));
-console.log(checkPrime(97));
-console.log(checkPrime(100));
+// const checkPrime = (number) => {
+//     if(number === 1){
+//         return 'false';
+//     } else if(number === 2){
+//         return 'true';
+//     } else {
+//         for(let i = 2; i < number; i++){
+//             if(number % i === 0){
+//                 return 'false';
+//             } else {
+//                 return 'true';
+//             };
+//         };
+//     };
+// };
+// console.log(checkPrime(37));
+// console.log(checkPrime(49));
+// console.log(checkPrime(97));
+// console.log(checkPrime(100));
 
-const printPrime = (number) => {
-    for(i = 2; i <= number; i++){
-        if(checkPrime(number) === true) {
-            console.log(i);
-        }
-    }
-};
+// const printPrime = (number) => {
+//     for(i = 2; i <= number; i++){
+//         if(checkPrime(number) === true) {
+//             console.log(i);
+//         }
+//     }
+// };
