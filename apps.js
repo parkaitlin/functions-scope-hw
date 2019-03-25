@@ -28,13 +28,22 @@ console.log('Homework!');
 
 //Digit Sum
 const sumDigits = (input) => {
-    let array = input.toString().split('');
-    array.reduce(function (accumulator, currentValue){
-        return accumulator + currentValue);
-    },
+    let numString = input.toString();
+    let numbers = [];
+    let sum = 0;
+    for(let i = 0; i < numString.length; i++){
+        numbers.push(+numString[i]);
+    };
+    for(let i = 0; i < numbers.length; i++){
+        sum += numbers[i];
+    };
+    return sum;
 };
 
 console.log(sumDigits(42));
+console.log(sumDigits(89));
+console.log(sumDigits(153));
+
 
 // Pythagoras
 // const calculateSide = (sideA,sideB) => {
