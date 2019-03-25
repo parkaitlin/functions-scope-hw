@@ -27,22 +27,22 @@ console.log('Homework!');
 
 
 //Digit Sum
-const sumDigits = (input) => {
-    let numString = input.toString();
-    let numbers = [];
-    let sum = 0;
-    for(let i = 0; i < numString.length; i++){
-        numbers.push(+numString[i]);
-    };
-    for(let i = 0; i < numbers.length; i++){
-        sum += numbers[i];
-    };
-    return sum;
-};
+// const sumDigits = (input) => {
+//     let numString = input.toString();
+//     let numbers = [];
+//     let sum = 0;
+//     for(let i = 0; i < numString.length; i++){
+//         numbers.push(+numString[i]);
+//     };
+//     for(let i = 0; i < numbers.length; i++){
+//         sum += numbers[i];
+//     };
+//     return sum;
+// };
 
-console.log(sumDigits(42));
-console.log(sumDigits(89));
-console.log(sumDigits(153));
+// console.log(sumDigits(42));
+// console.log(sumDigits(89));
+// console.log(sumDigits(153));
 
 
 // Pythagoras
@@ -57,13 +57,17 @@ console.log(sumDigits(153));
 // console.log(calculateSide(8,6));
 
 // Sum Array
-// const sumArray = (array) => {
-//     array.reduce(function (accumulator, currentValue){
-//         return accumulator + currentValue;
-//     }, 0);
-// };
+const sumArray = (array) => {
+    let totalSum = 0
+    for(let i = 0; i < array.length; i++){
+        totalSum += array[i];
+    };
+     return totalSum;
+};
 
-// console.log(sumArray([1, 2, 3, 4, 5, 6]));
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
+console.log(sumArray([3, 8, 38, 4, 1, 12]));
+
 
 //Prime numbers
 
