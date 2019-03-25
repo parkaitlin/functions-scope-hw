@@ -10,37 +10,31 @@ console.log('Homework!');
 //3. For a function, to return a value "return ()" needs to be 
     // included to stop the code and send an output to the console.
 
-// // Palindrome again
-const checkPalindrome = (str) => {
-    let remove = /[/W_]/g;
-    let initialString = str.toLowerCase().replace(remove, '');
-    let reverseString = initialString.split('').reverse().join('');
-    if(reverseString === initialString) {
-        return true
-    } else {
-        return false
-    };
-};
+// Palindrome again
+// const checkPalindrome = (str) => {
+//     let remove = /[/W_]/g;
+//     let initialString = str.toLowerCase().replace(remove, '');
+//     let reverseString = initialString.split('').reverse().join('');
+//     if(reverseString === initialString) {
+//         return true
+//     } else {
+//         return false
+//     };
+// };
 
-console.log(checkPalindrome('Radar'));
-console.log(checkPalindrome('Borscht'));
-
-// let str = 'radar'    
-// let array = str.split('');
-// let string = array.join('');
-// console.log(array);
-// console.log(string);
+// console.log(checkPalindrome('Radar'));
+// console.log(checkPalindrome('Borscht'));
 
 
 //Digit Sum
-// const sumDigits = (input) => {
-//     let array = input.toString().split('');
-//     array.reduce(function (accumulator, currentValue){
-//         return accumulator + currentValue);
-//     },
-// };
+const sumDigits = (input) => {
+    let array = input.toString().split('');
+    array.reduce(function (accumulator, currentValue){
+        return accumulator + currentValue);
+    },
+};
 
-// console.log(sumDigits(42));
+console.log(sumDigits(42));
 
 // Pythagoras
 // const calculateSide = (sideA,sideB) => {
